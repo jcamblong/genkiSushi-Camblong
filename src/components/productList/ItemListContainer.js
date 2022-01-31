@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import Data from '../../data/products.json';
+import data from '../../data/products.json';
+import ItemCount from "./ItemCount";
 
 const ItemListContainer = () => {
   return(
@@ -11,22 +12,15 @@ const ItemListContainer = () => {
     </div>
     <div className="box-container" id="product-list">
 
-      { Data.map(element => ( 
-        <div className='box'>
+      { data.map((element, index) => ( 
+        <div className='box' id={index}>
         <a href="#" className="fas fa-heart"></a>
         <div className="image">
             <img src={"img/food-"+ element.image +".png"} alt="" />
         </div>
         <div className="content">
             <h3>{element.name}</h3>
-            <div className="stars">
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star-half-alt"></i>
-                <span> (x10) </span>
-            </div>
+            <ItemCount />
             <div className="price">${element.price}</div>
             <a className="btn">agregar</a>
         </div>
