@@ -78,7 +78,8 @@
       "category": "Makis",
       "type": "Makis",
       "image": "1",
-      "detail": "Salmón, Queso, Palta"
+      "detail": "Salmón, Queso, Palta",
+      "stock": 50
   },
   {
       "id": "10",
@@ -87,7 +88,8 @@
       "category": "Makis",
       "type": "Makis",
       "image": "2",
-      "detail": "Kanikama, Queso, Palta"
+      "detail": "Kanikama, Queso, Palta",
+      "stock": 50
   },
   {
       "id": "11",
@@ -96,7 +98,8 @@
       "category": "Fritos",
       "type": "Rolls",
       "image": "3",
-      "detail": "Salmón, Palta, Queso, Kanikama + Salsa Dulce"
+      "detail": "Salmón, Palta, Queso, Kanikama + Salsa Dulce",
+      "stock": 50
   },
   {
       "id": "12",
@@ -105,7 +108,8 @@
       "category": "Fritos",
       "type": "Rolls",
       "image": "4",
-      "detail": "Salmón, Provenzal, Cheddar + Salsa (Sin Arroz)"
+      "detail": "Salmón, Provenzal, Cheddar + Salsa (Sin Arroz)",
+      "stock": 50
   },
   {
       "id": "13",
@@ -114,7 +118,8 @@
       "category": "Fritos",
       "type": "Rolls",
       "image": "5",
-      "detail": "Salmón, Queso con Salsa Kani"
+      "detail": "Salmón, Queso con Salsa Kani",
+      "stock": 50
   },
   {
       "id": "14",
@@ -123,7 +128,8 @@
       "category": "Argentos",
       "type": "Calientes",
       "image": "6",
-      "detail": "Bondiola sarteneada con Criolla"
+      "detail": "Bondiola sarteneada con Criolla",
+      "stock": 50
   },
   {
       "id": "15",
@@ -132,7 +138,8 @@
       "category": "Argentos",
       "type": "Calientes",
       "image": "7",
-      "detail": "Bondiola cocida con Cebolla"
+      "detail": "Bondiola cocida con Cebolla",
+      "stock": 50
   },
   {
       "id": "16",
@@ -141,7 +148,8 @@
       "category": "Argentos",
       "type": "Calientes",
       "image": "8",
-      "detail": "Bastones de Milanesa con Vegetales y Queso gratinado"
+      "detail": "Bastones de Milanesa con Vegetales y Queso gratinado",
+      "stock": 50
   },
   {
       "id": "17",
@@ -150,7 +158,8 @@
       "category": "Argentos",
       "type": "Calientes",
       "image": "1",
-      "detail": "Pollo Teriyaki y Queso cubierto con Tamago"
+      "detail": "Pollo Teriyaki y Queso cubierto con Tamago",
+      "stock": 50
   },
   {
       "id": "18",
@@ -159,7 +168,8 @@
       "category": "Especiales sin Arroz",
       "type": "Rolls",
       "image": "2",
-      "detail": "Salmón, Queso, Verdeo envuelto en Tamago"
+      "detail": "Salmón, Queso, Verdeo envuelto en Tamago",
+      "stock": 50
   },
   {
       "id": "19",
@@ -168,7 +178,8 @@
       "category": "Especiales sin Arroz",
       "type": "Rolls",
       "image": "3",
-      "detail": "Palmitos, Salmón envuelto en Tamago y Queso + Praliné"
+      "detail": "Palmitos, Salmón envuelto en Tamago y Queso + Praliné",
+      "stock": 50
   },
   {
       "id": "20",
@@ -177,7 +188,8 @@
       "category": "Especiales sin Arroz",
       "type": "Rolls",
       "image": "4",
-      "detail": "Relleno de Queso, Palmitps y Salmón, envuelto en Tamago + Salsa de Maracuyá y Batata"
+      "detail": "Relleno de Queso, Palmitps y Salmón, envuelto en Tamago + Salsa de Maracuyá y Batata",
+      "stock": 50
   },
   {
       "id": "21",
@@ -186,7 +198,8 @@
       "category": "Especiales sin Arroz",
       "type": "Rolls",
       "image": "5",
-      "detail": "Langostinos en tempura, Verdeo, Queso envuelto en Tamago cubierto con Salsa de Mango y Batata"
+      "detail": "Langostinos en tempura, Verdeo, Queso envuelto en Tamago cubierto con Salsa de Mango y Batata",
+      "stock": 50
   },
   {
       "id": "22",
@@ -195,7 +208,8 @@
       "category": "Especiales con Arroz",
       "type": "Rolls",
       "image": "6",
-      "detail": "Salmón frito, Queso semi cubierto con Palta y Salsa de Frutos Rojos"
+      "detail": "Salmón frito, Queso semi cubierto con Palta y Salsa de Frutos Rojos",
+      "stock": 50
   },
   {
       "id": "23",
@@ -204,7 +218,8 @@
       "category": "Especiales con Arroz",
       "type": "Rolls",
       "image": "7",
-      "detail": "Langostinos apanados fritos con Queso + Salsa Futurama"
+      "detail": "Langostinos apanados fritos con Queso + Salsa Futurama",
+      "stock": 50
   },
   {
       "id": "24",
@@ -213,7 +228,8 @@
       "category": "Especiales con Arroz",
       "type": "Rolls",
       "image": "8",
-      "detail": "Langostinos apanados cubierto con Salmón + Guacamole"
+      "detail": "Langostinos apanados cubierto con Salmón + Guacamole",
+      "stock": 50
   },
   {
       "id": "25",
@@ -222,7 +238,8 @@
       "category": "Especiales con Arroz",
       "type": "Rolls",
       "image": "1",
-      "detail": "Langostinos apanados, Palta, Ciboulette"
+      "detail": "Langostinos apanados, Palta, Ciboulette",
+      "stock": 50
   },
   {
       "id": "26",
@@ -231,6 +248,7 @@
       "category": "Especiales con Arroz",
       "type": "Rolls",
       "image": "2",
-      "detail": "Salmón y Mango semi cubierto con Queso y lluvia de Praliné de Almendras"
+      "detail": "Salmón y Mango semi cubierto con Queso y lluvia de Praliné de Almendras",
+      "stock": 50
   }
 ]
