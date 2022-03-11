@@ -4,7 +4,6 @@ import db from '../utils/firebaseConfig';
 
 export const firestoreFetch = async (category) => {
   let products;
-  console.log(category);
   if (category) {
     products = query(
       collection(db, "products"),

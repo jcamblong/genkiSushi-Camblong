@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { useContext, useEffect } from 'react';
 import { CartContext } from '../cart/CartContext';
 import { collection, doc, setDoc, serverTimestamp, updateDoc, increment } from "firebase/firestore";
