@@ -65,7 +65,7 @@ const Cart = () => {
             cartProducts.cartList.map(item =>
               <div className="box" key={item.itemId}>
 
-                <FontAwesomeIcon icon={faTimes} onClick={() => cartProducts.deleteItem(item.idItem)}/>
+                <FontAwesomeIcon icon={faTimes} onClick={() => cartProducts.deleteItem(item.itemId)}/>
                 <img src={item.imgItem} alt="" />
                 <div className="content">
                   <h3>{item.nameItem}</h3>
