@@ -3,19 +3,21 @@ import { useContext, useEffect } from 'react';
 import { CartContext } from '../cart/CartContext';
 import { collection, doc, setDoc, serverTimestamp, updateDoc, increment } from "firebase/firestore";
 import db from "../../utils/firebaseConfig";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 
 const Cart = () => {
-  const test = useContext(CartContext);
+  const cartProducts = useContext(CartContext);
 
   const createOrder = () => {
-    const itemsForDB = test.cartList.map(item => ({
+    const itemsForDB = cartProducts.cartList.map(item => ({
       id: item.idItem,
       title: item.nameItem,
       price: item.costItem
     }));
 
-    test.cartList.forEach(async (item) => {
+    cartProducts.cartList.forEach(async (item) => {
       const itemRef = doc(db, "products", item.idItem);
       await updateDoc(itemRef, {
         stock: increment(-item.qtyItem)
@@ -28,7 +30,7 @@ const Cart = () => {
         email: "leo@messi.com",
         phone: "123456789"
       },
-      total: test.calcTotal(),
+      total: cartProducts.calcTotal(),
       items: itemsForDB,
       date: serverTimestamp()
     };
@@ -46,7 +48,7 @@ const Cart = () => {
       .then(result => alert('Your order has been created. Please take note of the ID of your order.\n\n\nOrder ID: ' + result.id + '\n\n'))
       .catch(err => console.log(err));
 
-    test.removeList();
+    cartProducts.removeList();
 
   }
 
@@ -58,10 +60,26 @@ const Cart = () => {
         <h3 className="title">tus productos</h3>
 
         <div className="box-container">
+          {
+            cartProducts.cartList.length > 0 &&
+            cartProducts.cartList.map(item =>
+              <div className="box" key={item.itemId}>
 
-
+                <FontAwesomeIcon icon={faTimes} onClick={() => cartProducts.deleteItem(item.idItem)}/>
+                <img src={item.imgItem} alt="" />
+                <div className="content">
+                  <h3>{item.nameItem}</h3>
+                  <span> quantity : </span>
+                  <input type="number" name="" value={item.qtyItem} id="" readOnly/>
+                  <br />
+                  <span> Precio x Unidad: ${item.costItem}</span>
+                  <br />
+                  <span className="price">Total: $200 </span>
+                </div>
+              </div>
+            )
+          }
         </div>
-
       </div>
 
       <div className="cart-total">
@@ -70,11 +88,11 @@ const Cart = () => {
 
         <div className="box">
 
-          <h3 className="subtotal"> Subtotal: <span>$0</span> </h3>
-          <h3 className="subtotal" id="iva"> IVA: <span>$0</span> </h3>
-          <h3 className="total"> Total: <span>$0</span> </h3>
+          <h3 className="subtotal"> Subtotal: <span>${cartProducts.calcSubTotal()}</span> </h3>
+          <h3 className="subtotal" id="iva"> IVA: <span>${cartProducts.calcTaxes()}</span> </h3>
+          <h3 className="total"> Total: <span>${cartProducts.calcTotal()}</span> </h3>
 
-          <a href="#" className="btn">realizar pedido</a>
+          <button className="btn" onClick={createOrder}>Realizar Pedido</button>
 
         </div>
 

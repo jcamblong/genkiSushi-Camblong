@@ -7,12 +7,12 @@ import "../../App.css";
 const ItemDetail = (item) => {
 
   const [itemCount, setItemCount] = useState(0);
-  const test = useContext(CartContext);
+  const product = useContext(CartContext);
 
   const onAdd = (qty) => {
-      alert("You have selected " + qty + " items.");
+      alert("Se agregaron " + qty + " unidades al carrito.");
       setItemCount(qty);
-      test.addToCart(item, qty);
+      product.addToCart(item.item, qty);
   }
 
   return (
