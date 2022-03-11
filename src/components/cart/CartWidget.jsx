@@ -1,7 +1,6 @@
-import React, { useState } from "react";
-import CartContext from "../cart/CartContext";
+import { CartContext } from "../cart/CartContext";
 import { Link } from "react-router-dom";
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
@@ -10,7 +9,7 @@ const CartWidget = () => {
   return (
     <div className="icons">
       <Link to='/cart'><FontAwesomeIcon icon={faShoppingCart} /></Link>
-      <span className='badge badge-warning' id='lblCartCount'> 4 </span>
+      <span className='badge badge-warning' id='lblCartCount'> {cartItems.calcItemsQty()} </span>
     </div>
   );
 };
