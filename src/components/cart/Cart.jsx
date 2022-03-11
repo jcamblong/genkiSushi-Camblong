@@ -73,7 +73,7 @@ const Cart = () => {
                   <br />
                   <span> Precio x Unidad: ${item.costItem}</span>
                   <br />
-                  <span className="price">Total: $200 </span>
+                  <span className="price">Total: ${cartProducts.calcTotalPerItem(item.itemId)} </span>
                 </div>
               </div>
             )
