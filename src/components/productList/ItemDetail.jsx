@@ -21,9 +21,9 @@ const ItemDetail = (item) => {
         <img src={item.item.image} alt="" />
       </div>
       <div className="content">
-        <h3>{item.item.name}</h3>
-        <div className="price">$ {item.item.price}</div>
-        <div className="description">{item.item.detail}</div>
+        <h1>{item.item.name}</h1>
+        <div className="price">Precio: ${item.item.price}</div>
+        <div className="description">Ingredientes: {item.item.detail}</div>
         <ItemCount stock={item.item.stock} initial={itemCount} onAdd={onAdd}/>
       </div>
     </div>
