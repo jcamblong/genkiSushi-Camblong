@@ -1,18 +1,35 @@
-import React, { useState } from "react";
-import data from '../../data/products.json';
 import ItemList from "./ItemList";
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router';
+import { firestoreFetch } from '../../utils/firestoreFetch';
 
 const ItemListContainer = () => {
-  return(
+  const [ filtrados, setFiltrados ] = useState([]);
+  const { category } = useParams();
+
+  useEffect(() => {
+    firestoreFetch(category)
+      .then(result => setFiltrados(result))
+      .catch(err => console.log(err));
+  }, [category]);
+
+  useEffect(() => {
+    return (() => {
+      setFiltrados([]);
+    })
+  }, []);
+
+  return (
     <section className="popular" id="popular">
 
-    <div className="heading">
+      <div className="heading">
         <span>nuestra carta</span>
         <h3>categorias</h3>
-    </div>
-    <ItemList items={data}/>
+      </div>
+      <ItemList items={filtrados} />
 
     </section>
-  )};
+  )
+};
 
-  export default ItemListContainer;
+export default ItemListContainer;

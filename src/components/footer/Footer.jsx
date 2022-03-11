@@ -19,7 +19,7 @@ export default function Footer() {
 
         <div className="credit">
           {" "}
-          <span>Genki Sushi 2021</span> | todos los derechos reservados.{" "}
+          <span>Genki Sushi 2022</span> | todos los derechos reservados.{" "}
         </div>
       </div>
     </section>

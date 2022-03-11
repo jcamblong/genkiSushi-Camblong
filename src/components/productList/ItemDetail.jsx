@@ -1,18 +1,30 @@
 import ItemCount from "./ItemCount";
+import { useState, useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { CartContext } from "../cart/CartContext";
+import "../../App.css";
 
 const ItemDetail = (item) => {
-  console.log({ item });
+
+  const [itemCount, setItemCount] = useState(0);
+  const test = useContext(CartContext);
+
+  const onAdd = (qty) => {
+      alert("You have selected " + qty + " items.");
+      setItemCount(qty);
+      test.addToCart(item, qty);
+  }
 
   return (
-    <div className="box">
+    <div className="detail-box">
       <div className="image">
-        <img src={"img/food-" + item.image + ".png"} alt="" />
+        <img src={item.item.image} alt="" />
       </div>
       <div className="content">
-        <h3>{item.name}</h3>
-        <div className="price">$ {item.price}</div>
-        <div className="description">{item.detail}</div>
-        <ItemCount />
+        <h3>{item.item.name}</h3>
+        <div className="price">$ {item.item.price}</div>
+        <div className="description">{item.item.detail}</div>
+        <ItemCount stock={item.item.stock} initial={itemCount} onAdd={onAdd}/>
       </div>
     </div>
   );
